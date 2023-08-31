@@ -16,6 +16,10 @@ app.use(cors(
                   credentials :true
          }
 ))
+
+app.get("/", function(req,res){
+ res.send("Hello World Its working")        
+})
          
 //I changed here for Git check
 const controller = require("../controller/controller");
