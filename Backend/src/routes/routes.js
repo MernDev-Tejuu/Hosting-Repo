@@ -11,7 +11,7 @@ app.use(express.json());
 //
 app.use(cors(
          {
-                  origin : ["https://tejas-interview-hub2-3ybsp6nch-merndev-tejuu.vercel.app/"],
+                  origin : ["https://hosting-re.vercel.app/"],
                   methods : ["POST","GET"],
                   credentials :true
          }
