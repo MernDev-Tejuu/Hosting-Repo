@@ -9,6 +9,13 @@ app.use(cookieParser()); // import the CORS middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());  
 //
+app.use(cors(
+         {
+                  origin : [],
+                  methods : ["POST","GET"],
+                  credentials :true
+         }
+))
          
 //I changed here for Git check
 const controller = require("../controller/controller");
