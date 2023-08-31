@@ -17,7 +17,7 @@ app.use(cors(
          }
 ))
 
-app.get("https://hosting-4crfkit4v-merndev-tejuu.vercel.app/", function(req,res){
+app.get("https://hosting-repo.vercel.app/jack", function(req,res){
  res.send("Hello World Its working")        
 })
          
