@@ -1,16 +1,3 @@
- {
-  "builds":[
-   {
-    "src":"src/routes/routes.js",
-    "use":"@vercel/node"
-   }
-  ],
-  "routes":[
-   { 
-    "src":"/.*",
-    "dest":"src/routes/routes.js"
-   }
-  ]
-
+{
+  "rewrites": [{ "source": "/(.*)", "destination": "/api" }]
 }
-
