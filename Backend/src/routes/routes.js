@@ -17,7 +17,7 @@ app.use(cors(
          }
 ))
 
-app.get("/", function(req,res){
+app.get("https://hosting-pzug2qgle-merndev-tejuu.vercel.app/", function(req,res){
  res.send("Hello World Its working")        
 })
          
