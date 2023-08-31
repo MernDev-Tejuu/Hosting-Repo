@@ -6,12 +6,15 @@
       "use": "@vercel/node"
     }
   ],
+ 
   "routes": [
-    {
-      "src": "/",
-      "dest": "/"
-    },
-   
+    { "src": "^/static/(.*)", "dest": "/static/$1" },
+    { "src": ".*", "dest": "/index.html" }
+  ],
+  "headers": [
+    { "source": "/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=3600" }] }
   ]
+
+
 }
 
