@@ -16,12 +16,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"node src/routes/routes.js",
-    "server":"nodemon routes.js",
-    "frontend":"npm start --prefix frontend",
-    "dev" : "concurrently \"npm start\" \"npm run frontend\" "
-   
-    
+    "start": "node src/routes/routes.js",
+    "server": "nodemon routes.js",
+    "frontend": "npm start --prefix frontend",
+    "dev": "concurrently \"npm start\" \"npm run frontend\" "
   },
   "author": "Tejas Gade",
   "license": "ISC"
