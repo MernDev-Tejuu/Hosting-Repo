@@ -11,7 +11,7 @@ app.use(express.json());
 //
 app.use(cors(
          {
-                  origin : ["https://hosting-repo.vercel.app"],
+                  origin : ["https://tejuu-interview-hub.onrender.com"],
                   methods : ["POST","GET"],
                   credentials :true
          }
