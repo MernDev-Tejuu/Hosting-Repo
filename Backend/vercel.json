@@ -1,18 +1,17 @@
 {
               "version": 2,
               "builds": [
-  {
-    "src": "package.json",
-    "use": "@now/static-build",
-    "config": { "distDir": "build" }
-  }
-]
+                {
+                  "src": "src/routes/routes.js",
+                  "use": "@vercel/node"
+                }
+              ],
               "routes": [
                 {
                  
                   "src": "/(.*)",
                   
-                  "dest": "routes.js"
+                  "dest": "src/routes/routes.js"
                 }
               ]
             }
