@@ -11,15 +11,16 @@ app.use(express.json());
 //
 app.use(cors(
          {
-                  origin : ["https://hosting-re.vercel.app/"],
+                  origin : ["https://hosting-repo.vercel.app"],
                   methods : ["POST","GET"],
                   credentials :true
          }
 ))
 
-app.get("https://hosting-repo.vercel.app/jack", function(req,res){
- res.send("Hello World Its working")        
+app.get("https://hosting-repo.vercel.app/load",(req,res)=>{
+  res.send("hello")
 })
+
          
 //I changed here for Git check
 const controller = require("../controller/controller");
