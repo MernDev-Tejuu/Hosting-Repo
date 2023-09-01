@@ -16,7 +16,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build":"npm i"
+    "build":"npm i",
+    "start" : "node src/routes/routes.js"
   },
   "author": "Tejas Gade",
   "license": "ISC"
