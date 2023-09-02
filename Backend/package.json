@@ -13,7 +13,7 @@
     "name": "backend_program",
     "version": "1.0.0",
     "description": "This Folder contains backend applications for the webapp",
-    "main": "index.js",
+    "main": "src/routes/routes.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "npm i",
