@@ -19,6 +19,6 @@
         "build": "npm i",
         "start": "node src/routes/routes.js"
     },
-    "author": "Tejas Gade",
+    "author": "Tejas Gade ",
     "license": "ISC"
 }
