@@ -1,3 +1,6 @@
 [submodule "module/Hosting-Repo"]
 	path = module/Hosting-Repo
 	url = https://github.com/MernDev-Tejuu/Hosting-Repo.git
+[submodule "website"]
+	path = website
+	url = https://github.com/MernDev-Tejuu/website.git
