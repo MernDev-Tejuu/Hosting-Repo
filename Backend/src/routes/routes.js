@@ -12,7 +12,7 @@ app.use(express.json());
 //
 app.use(cors(
          {
-                  origin : ["https://tejuu-interview-hub.onrender.com"],
+                  origin : ["https://tejas-interview-hub.netlify.app/"],
                   methods : ["POST","GET"],
                   credentials :true
          }
