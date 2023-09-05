@@ -46,6 +46,7 @@ ul {
   background-color: #ffffff;
 }
 
+
 /* -------------------------home-body-container-------------------------------- */
 .home-body-container {
   width: 100%;
@@ -1067,7 +1068,23 @@ left: 85px;
       background: linear-gradient(150deg, white 58%, black 30%);
       
     }
-    
+
+    @media screen and (max-width: 768px){
+.navbar-nav {
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    left: -74px;
+    display: -webkit-box;
+    bottom: 146px;
+    margin-left: 59px;
+    /* padding-left: 73px; */
+}
+.navbar-nav li {
+  display: flex;
+  margin-left: 13px;
+}
+}
     }
 
 
