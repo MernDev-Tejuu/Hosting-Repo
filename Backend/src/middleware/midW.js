@@ -87,10 +87,7 @@ const user = require("../model/schema")
       catch(err){
         console.log(err.message)
       }
-      res.cookie('presenty', token, {
-        httpOnly: true,
-        domain: '.tejascareer.com',
-      });
+     
     }
 // } 
   module.exports.authJWT=authJWT
