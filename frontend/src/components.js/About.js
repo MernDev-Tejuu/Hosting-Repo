@@ -34,7 +34,7 @@ const About = () => {
     useEffectCall();
   }, []);
   
-  console.log(fetchData,"<--Data here")
+  console.log(fetchData.,"<--Data here")
  
   
   
