@@ -13,25 +13,25 @@ const About = () => {
   const [fetchData, setData] = useState({});
 
   const useEffectCall = async () => {
-   
-      const res = await fetch("https://tejascareer.onrender.com/about", {
-        method: "GET",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        credentials: "include",
-      });
-      const data = await res.json();
-      setData(data);
-      
-    };
-    console.log(useEffectCall)
+  try {
+    const res = await fetch("https://tejascareer.onrender.com/about", {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      credentials: "include",
+    });
+    if (!res.ok) {
+      throw new Error(`HTTP error! Status: ${res.status}`);
+    }
+    const data = await res.json();
+    setData(data);
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
+};
 
-  useEffect(() => {
-    useEffectCall();
-  }, []);
-  console.log(useEffectCall())
   
  
   
