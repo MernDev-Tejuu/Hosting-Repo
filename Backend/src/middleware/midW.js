@@ -81,6 +81,7 @@ const user = require("../model/schema")
          if(!finder){throw new error('user not present')}
      
          req.finder=finder   
+         console.log(req.finder)
          next()
       }
       catch(err){
