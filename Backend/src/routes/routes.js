@@ -12,7 +12,7 @@ app.use(express.json());
 //
 app.use(cors(
          {
-                  origin : 'https://TejasCareer.com.netlify.app',
+                  origin : 'https://tejascareer.com.netlify.app',
                   methods : ["POST","GET"],
                   credentials :true
          }
