@@ -29,12 +29,12 @@ const About = () => {
       
     };
     console.log(useEffectCall)
-    window.alert(res,"<--res",data,"<--data")
+   
   useEffect(() => {
     useEffectCall();
   }, []);
   
-  
+  window.alert(useEffectCall(),"<--Data here")
  
   
   
