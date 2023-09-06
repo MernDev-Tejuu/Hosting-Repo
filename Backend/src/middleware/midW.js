@@ -70,7 +70,7 @@ const user = require("../model/schema")
     const authenticate = async(req,res,next)=>{
       try{
         
-         window.alert("Flow went)
+         window.alert("Flow went")
           
          const tokenFetch = req.cookies.presenty
          if(!tokenFetch)window.alert('Something Went Wrong,Try to register again')
