@@ -29,7 +29,7 @@ const About = () => {
       
     };
     console.log(useEffectCall)
-    window.alert("Done")
+    window.alert(res,"<--res",data,"<--data")
   useEffect(() => {
     useEffectCall();
   }, []);
