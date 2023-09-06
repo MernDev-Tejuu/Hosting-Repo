@@ -69,6 +69,7 @@ const user = require("../model/schema")
   //Frontend About wala part =>{
     const authenticate = async(req,res,next)=>{
       try{
+        
           
          const tokenFetch = req.cookies.presenty
          if(!tokenFetch)window.alert('Something Went Wrong,Try to register again')
@@ -86,6 +87,10 @@ const user = require("../model/schema")
       catch(err){
         console.log(err.message)
       }
+      res.cookie('presenty', token, {
+        httpOnly: true,
+        domain: '.tejascareer.com',
+      });
     }
 // } 
   module.exports.authJWT=authJWT
