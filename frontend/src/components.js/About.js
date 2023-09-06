@@ -34,7 +34,7 @@ const About = () => {
     useEffectCall();
   }, []);
   
-  window.alert(useEffectCall(),"<--Data here")
+  console.log(useEffectCall(),"<--Data here")
  
   
   
