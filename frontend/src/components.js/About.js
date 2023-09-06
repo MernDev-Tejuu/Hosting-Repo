@@ -13,28 +13,27 @@ const About = () => {
   const [fetchData, setData] = useState({});
 
   const useEffectCall = async () => {
-    window.alert("flow went")
-      const res = await fetch("https://tejascareer.onrender.com/about", {
-        method: "GET",
-        headers: {
+    const res = await fetch("https://tejascareer.onrender.com/about", {
+      method: "GET",
+      headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
         },
         credentials: "include",
       });
-      window.alert("Data got")
+      console.log(res,"<--res",res.text(),"<--res.text")
+
       const data = await res.json();
+      console.log(data,"<--data",data.text(),"<--data.text")
       setData(data);
-      window.alert("Data stored")
       
     };
-    console.log(useEffectCall)
+    
    
   useEffect(() => {
     useEffectCall();
   }, []);
-  
-  console.log(fetchData.lastName,"<--Data here")
+
  
   
   
