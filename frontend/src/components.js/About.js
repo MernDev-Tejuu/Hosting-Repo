@@ -14,7 +14,7 @@ const About = () => {
 
   const useEffectCall = async () => {
     window.alert("flow went")
-      const res = await fetch("/about", {
+      const res = await fetch("https://tejascareer.onrender.com/about", {
         method: "GET",
         headers: {
           Accept: "application/json",
