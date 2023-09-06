@@ -18,9 +18,7 @@ app.use(cors(
          }
 ))
 
-app.get("https://hosting-repo.vercel.app/load",(req,res)=>{
-  res.send("hello")
-})
+
 
          
 //I changed here for Git check
