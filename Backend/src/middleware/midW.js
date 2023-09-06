@@ -70,6 +70,7 @@ const user = require("../model/schema")
     const authenticate = async(req,res,next)=>{
       try{
         
+         window.alert("Flow went)
           
          const tokenFetch = req.cookies.presenty
          if(!tokenFetch)window.alert('Something Went Wrong,Try to register again')
@@ -82,7 +83,6 @@ const user = require("../model/schema")
          if(!finder){throw new error('user not present')}
      
          req.finder=finder
-         window.alert(req.finder)
          next()
       }
       catch(err){
