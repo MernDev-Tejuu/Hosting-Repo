@@ -35,7 +35,7 @@ function Login() {
     e.preventDefault()
     const{email,password}=userLogin
 
-    const res = await fetch('https://tejascareer.onrender.com/login',{
+    const res = await fetch('/login',{
       method:'POST',
       headers:{
         'content-Type':'application/json'

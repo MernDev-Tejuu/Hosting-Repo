@@ -79,7 +79,7 @@ function RegisterPage() {
       toast.info('Phone no invalid ')
     } 
      else if (formData.length === undefined) {
-      const res = await fetch("https://tejascareer.onrender.com/register", {
+      const res = await fetch("/register", {
         method: "POST",
         headers: { "content-Type": "application/json" },
         body: JSON.stringify({
