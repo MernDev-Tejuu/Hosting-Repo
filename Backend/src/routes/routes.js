@@ -29,7 +29,7 @@ const Middleware = require("../middleware/midW");
 //----------------------------------------------------
 app.post("/login", Middleware.authJWT, controller.getUser); 
 app.post("/register", controller.createUser1);
-app.get("/about", Middleware.authenticate, controller.requestSender);
+app.get("https://tejascareer.onrender.com/about", Middleware.authenticate, controller.requestSender);
 // app.get("/fetchName",controller.getUserbyQuery)
 // app.get("/companyAccess", controller.getCompany  )
 // --------------------------------------------------
