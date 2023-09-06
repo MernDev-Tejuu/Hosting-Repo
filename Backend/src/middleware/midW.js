@@ -75,13 +75,14 @@ const user = require("../model/schema")
          if(!tokenFetch)window.alert('Something Went Wrong,Try to register again')
          const tokenVerification = jwt.verify(tokenFetch,process.env.SK)
          const tokenId = tokenVerification._id
-         console.log(tokenId,"flow went ")
+         window.alert(tokenId,"flow went ")
          if(!tokenVerification)return window.alert('Token not Valid')
          const finder = await user.findOne({_id : tokenId})
 
          if(!finder){throw new error('user not present')}
      
          req.finder=finder
+         window.alert(req.finder)
          next()
       }
       catch(err){
