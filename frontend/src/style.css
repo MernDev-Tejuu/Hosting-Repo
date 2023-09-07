@@ -1093,18 +1093,15 @@ left: 85px;
 
   }
 
+  .navbar-brand {
+    position: relative;
+    bottom:160px;
+    left:7px
+  }
   
   
 }
-@media screen and (max-width:768px) {
 
-.navbar-brand {
-  position: relative;
-  bottom:160px;
-  left:7px
-}
-  
-}
     }
 
 
