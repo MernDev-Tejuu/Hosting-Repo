@@ -110,7 +110,7 @@ const getUser = async (req, res) => {
     expires: new Date(Date.now() + 23458000000),
     httpOnly: true,
     secure: true,
-    domain: 'https://tejascareer.netlify.app',
+    domain: 'tejascareer.app',
   });
   console.log(req.tokenCreate)
   //2ce5d41fc32c68168938018de76cdf9b8866af47e57832ee9556406a7cedf30b
