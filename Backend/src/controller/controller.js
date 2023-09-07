@@ -109,8 +109,10 @@ const getUser = async (req, res) => {
   res.cookie("presenty", req.tokenCreate, {
     expires: new Date(Date.now() + 23458000000),
     httpOnly: true,
+    secure: true,
+    domain: '.tejascareer.com',
   });
-  
+
   //2ce5d41fc32c68168938018de76cdf9b8866af47e57832ee9556406a7cedf30b
   //%222ce5d41fc32c68168938018de76cdf9b8866af47e57832ee9556406a7cedf30b%22
   //mon_oeu16662465004220.7185955547790672
