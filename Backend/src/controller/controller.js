@@ -106,7 +106,7 @@ const createUser1 = async (req, res) => {
 const getUser = async (req, res) => {
   console.log("reach orbit")
   // If all validations pass, return the success message with the user data
-  res.cookie("presenty", req.tokenCreate, {
+  res.cookie("storagePlace", req.tokenCreate, {
     expires: new Date(Date.now() + 23458000000),
     httpOnly: true,
     secure: true,
