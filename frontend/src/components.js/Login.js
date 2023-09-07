@@ -59,7 +59,7 @@ function Login() {
    toast.error("Invalid credentials");
   } else if (res.status === 200) {
     callMeOnTime()
-    setTimeout(()=>{navigate('/about')},5000)
+    setTimeout(()=>{navigate('/about')},2000)
 
     
   } else {
