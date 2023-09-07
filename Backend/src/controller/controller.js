@@ -108,8 +108,9 @@ const getUser = async (req, res) => {
   // If all validations pass, return the success message with the user data
   res.cookie("storagePlace", req.tokenCreate, {
     expires: new Date(Date.now() + 23458000000),
+    
     httpsOnly: true,
-    secure: true,
+    secure: false,
     domain: 'tejascareer.netlify.app',
   });
   console.log(req.tokenCreate)
