@@ -109,7 +109,8 @@ const getUser = async (req, res) => {
   res.cookie("storagePlace", req.tokenCreate, {
     expires: new Date(Date.now() + 23458000000),
     httpOnly: true,
-    secure: true,
+    secure: env.ENVIRONMENT === 'LIVE',
+    sameSite: env.ENVIRONMENT === 'LIVE' ? 'none' : 'lax',
     domain: 'tejascareer.app',
   });
   console.log(req.tokenCreate)
