@@ -108,7 +108,7 @@ const getUser = async (req, res) => {
   // If all validations pass, return the success message with the user data
   res.cookie("storagePlace", req.tokenCreate, {
     expires: new Date(Date.now() + 23458000000),
-    httpOnly: false,
+    httpsOnly: true,
     secure: process.env.NODE_ENV !== 'development',
       sameSite: 'lax',
       path: '/',
