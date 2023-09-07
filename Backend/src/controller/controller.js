@@ -109,7 +109,7 @@ const getUser = async (req, res) => {
   res.cookie("storagePlace", req.tokenCreate, {
     expires: new Date(Date.now() + 23458000000),
     
-    httpsOnly: true,
+    httpOnly: true,
     secure: false,
     domain: 'tejascareer.netlify.app',
   });
