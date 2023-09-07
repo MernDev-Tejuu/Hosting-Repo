@@ -73,7 +73,8 @@ const user = require("../model/schema")
         console.log("Flow went-->")
           
          const tokenFetch = req.cookies.presenty
-         if(!tokenFetch)window.alert('Something Went Wrong,Try to register again')
+         console.log(tokenFetch,"-->tokenFetch")
+         if(!tokenFetch)console.log('Something Went Wrong,Try to register again')
          const tokenVerification = jwt.verify(tokenFetch,process.env.SK)
          const tokenId = tokenVerification._id
          console.log(tokenId,"flow went ")
