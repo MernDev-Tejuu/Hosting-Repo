@@ -60,7 +60,7 @@ function RegisterPage() {
       toast.success('Signup Successful! Taking you to the login page.')
       
       setTimeout(()=>
-      {navigate('/login')},5000
+      {navigate('/login')},3000
       )
     }
     let missingField = null;
