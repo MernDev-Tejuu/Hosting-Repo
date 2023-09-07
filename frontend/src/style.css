@@ -901,13 +901,7 @@ left: 85px;
     text-align: center;
   }
   
-  #Me-Sector {
-    margin: 10px 0;
-  } 
-
-  .navbar-brand h6 {
-    margin-left: 0;
-  }
+  
 }
 
 @media (max-width:600px){
