@@ -1098,6 +1098,21 @@ left: 85px;
     top: 30px;
 
   }
+
+  
+  
+}
+@media screen and (max-width:768px) {
+#Me-Sector {
+  position: relative;
+  bottom: 160px;
+  left:7px
+}
+.navbar-brand  h6{
+  position: relative;
+  bottom:160px;
+  left:7px
+}
   
 }
     }
