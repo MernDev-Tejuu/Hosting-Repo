@@ -62,28 +62,28 @@ const About = () => {
                 Account No :
                 
               </li><span className="About-fetchData">{fetchData._id}</span>
-              <li>
+              <li id="username">
                 UserName:
               </li>
 <span className="About-fetchData">{fetchData.firstName}<span>_</span>{fetchData.lastName}{fetchData.age}</span>
-              <li>
+              <li id="age">
                 Age : 
               </li>
 <span className="About-fetchData">{fetchData.age}</span>
-              <li>
+              <li id="email">
                 Email :
                 
               </li>
 
 <span className="About-fetchData">{fetchData.email}</span>
 
-              <li>
+              <li id="gender">
                 Gender:
                 
               </li>
 <span className="About-fetchData">{fetchData.gender}</span>
 
-              <li>
+              <li id="phone">
                 Phone:
               </li>
 <span className="About-fetchData"><span>+91-</span>{fetchData.phone}</span>

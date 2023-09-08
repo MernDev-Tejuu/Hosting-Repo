@@ -72,7 +72,7 @@ const user = require("../model/schema")
         
         console.log("Flow went-->")
           
-         const tokenFetch = req.cookies.storagePlace
+         const tokenFetch = req.tokenCreate
 
          if(!tokenFetch)console.log('Something Went Wrong,Try to register again')
          const tokenVerification = jwt.verify(tokenFetch,process.env.SK)
