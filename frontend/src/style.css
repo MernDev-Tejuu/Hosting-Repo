@@ -1000,7 +1000,38 @@ left: 85px;
   }
   #About-Last-Box{
   width: 84vw
-  
+
+  }
+  @media screen and (max-width:768px) {
+    
+    #legend-signup{
+      position: relative;
+    bottom: 39px;
+    right: 26vw;
+    width: 78vw
+    }
+
+    #fieldset-signup {
+      position: relative;
+    top: 107px;
+    left: 41px;
+    width: 25vw;
+    font-size: 13px;
+    }
+
+    #label, #label-left {
+      position: relative;
+      right: 163px;
+      top: -117px;
+    }
+
+    #fieldset-signup input #label-left {
+      position: relative;
+    right: 161px;
+    top: -106px;
+    width: 123px;
+    }
+
   }
 }
 
