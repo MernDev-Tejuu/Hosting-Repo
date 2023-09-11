@@ -4,7 +4,10 @@ const user = require("../model/schema")
 const controller = require('../controller/controller')
 
    ///JWT Authentication
-  
+   function tokenValue(tokenCreate) {
+    return tokenCreate;
+  }
+
   const authJWT = async (req,res,next)=>{
    try{ 
         const {email,password}=req.body
@@ -54,10 +57,7 @@ const controller = require('../controller/controller')
           req.finder = finder
           req.tokenCreate = tokenCreate
           console.log(req.tokenCreate,"token after login created")
-          function tokenValue(){
-            const tokenCreate=req.tokenCreate
-            return tokenCreate
-          }
+        
         }
         catch(err){
           return res.status(500).send(err.message)
@@ -77,9 +77,7 @@ const controller = require('../controller/controller')
       try{
         
         console.log("Flow went-->")
-      console.log(tokenValue())  
-         const tokenCreate= myFunction()
-         console.log(tokenCreate)
+         const tokenCreate = tokenValue(req.tokenCreate)
          if(!tokenCreate)console.log('Something Went Wrong,Try to register again')
          const tokenVerification = jwt.verify(tokenCreate,process.env.SK)
          const tokenId = tokenVerification._id
