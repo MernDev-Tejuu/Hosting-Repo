@@ -72,8 +72,8 @@ const user = require("../model/schema")
         
         console.log("Flow went-->")
           
-        console.log(req.tokenCreation)
-         const findOneDB= await user.findOne(req.tokenCreation.email)
+        
+         const findOneDB= req.tokenCreate
          if(!findOneDB)console.log('Something Went Wrong,Try to register again')
          const tokenVerification = jwt.verify(findOneDB,process.env.SK)
          const tokenId = tokenVerification._id

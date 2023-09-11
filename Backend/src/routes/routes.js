@@ -12,6 +12,7 @@ const session = require('express-session');
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());  
 //
+
 app.use(
   session({
     secret: process.env.SESSION_SECRET || 'Super Secret (change it)',
