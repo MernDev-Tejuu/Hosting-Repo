@@ -904,7 +904,7 @@ left: 85px;
   
 }
 
-@media (max-width:600px){
+@media (max-width:768px){
    .signup-inner-page #legend-signup{
          background-color: #000000;
          position: relative;
