@@ -115,7 +115,7 @@ const getUser = async (req, res) => {
 const requestSender = (req,res)=>{
   console.log('allowed')
   return res.send(req.finder)
-  console.log('allowed')
+  // console.log('allowed')
 }
 //Making Variables Public
 module.exports.getUser = getUser;

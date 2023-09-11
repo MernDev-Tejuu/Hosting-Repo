@@ -32,7 +32,9 @@ const About = () => {
    
   useEffect(() => {
     useEffectCall();
+    console.log(fetchData.lastName)
   }, []);
+  console.log(fetchData.lastName)
 
  
   
