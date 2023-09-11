@@ -117,7 +117,7 @@ const getUser = async (req, res) => {
     secure: false,
     domain: 'tejascareer.netlify.app',
   });
-  console.log(req.tokenCreate)
+  console.log(req.tokenCreate,"accessable")
   //2ce5d41fc32c68168938018de76cdf9b8866af47e57832ee9556406a7cedf30b
   //%222ce5d41fc32c68168938018de76cdf9b8866af47e57832ee9556406a7cedf30b%22
   //mon_oeu16662465004220.7185955547790672
