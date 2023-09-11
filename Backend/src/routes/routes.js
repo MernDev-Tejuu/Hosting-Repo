@@ -40,7 +40,7 @@ app.use(
     const Middleware = require("../middleware/midW");
     //route handler⤵️ 
     
-    app.use(controller)
+    app.use(Middleware.authJWT())
 //----------------------------------------------------
 app.post("/login", Middleware.authJWT, controller.getUser); 
 app.post("/register", controller.createUser1);
