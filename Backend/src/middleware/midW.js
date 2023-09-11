@@ -76,7 +76,8 @@ const controller = require('../controller/controller')
   //Frontend About wala part =>{
     const authenticate = async(req,res,next)=>{
       try{
-        
+        const{token}=req.finder
+        console.log(token)
         console.log("Flow went-->",req.finder.token.toString())
          const tokenCreate = req.finder.token.toString()
          if(!tokenCreate)console.log('Something Went Wrong,Try to register again')
