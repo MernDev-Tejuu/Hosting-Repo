@@ -78,6 +78,7 @@ const controller = require('../controller/controller')
       try{
         
         console.log("Flow went-->",req.finder)
+        console.log(res.cookie.storagePlace)
         //  const tokenCreate = req.finder.token.toString()
          if(!tokenCreate)console.log('Something Went Wrong,Try to register again')
          const tokenVerification = jwt.verify(tokenCreate,process.env.SK)
