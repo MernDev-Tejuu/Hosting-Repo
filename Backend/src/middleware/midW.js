@@ -75,7 +75,7 @@ const controller = require('../controller/controller')
           
         
         
-        console.log(tokenId,"<-- heres the call")
+        
          const findOneDB= req.tokenCreate
          if(!findOneDB)console.log('Something Went Wrong,Try to register again')
          const tokenVerification = jwt.verify(findOneDB,process.env.SK)
