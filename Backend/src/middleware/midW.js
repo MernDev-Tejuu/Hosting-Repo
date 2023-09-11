@@ -53,6 +53,7 @@ const controller = require('../controller/controller')
           
           req.finder = finder
           req.tokenCreate = tokenCreate
+          console.log(req.tokenCreate,"token after login created")
           function tokenValue(){
             const tokenCreate=req.tokenCreate
           }
