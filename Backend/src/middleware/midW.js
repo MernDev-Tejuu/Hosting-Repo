@@ -73,7 +73,7 @@ const controller = require('../controller/controller')
         
         console.log("Flow went-->")
           
-        const newVar = controller.createUser1.tokenCreation()
+        const newVar = controller.createUser1.tokenCreation
         console.log(newVar,"<-- heres the call")
          const findOneDB= req.tokenCreate
          if(!findOneDB)console.log('Something Went Wrong,Try to register again')
