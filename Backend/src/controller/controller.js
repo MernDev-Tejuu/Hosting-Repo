@@ -109,14 +109,14 @@ const getUser = async (req, res) => {
   
   // If all validations pass, return the success message with the user data
   const finder = req.finder;
-  const tokenCreate = finder.token.toString()
-  res.cookie("storagePlace",tokenCreate, {
-    expires: new Date(Date.now() + 23458000000),
+  // const tokenCreate = finder.token.toString()
+  // res.cookie("storagePlace",tokenCreate, {
+  //   expires: new Date(Date.now() + 23458000000),
     
-    httpOnly: true,
-    secure: false,
-    domain: 'tejascareer.netlify.app',
-  });
+  //   httpOnly: true,
+  //   secure: false,
+  //   domain: 'tejascareer.netlify.app',
+  // });
   console.log(req.tokenCreate,"accessable")
   //2ce5d41fc32c68168938018de76cdf9b8866af47e57832ee9556406a7cedf30b
   //%222ce5d41fc32c68168938018de76cdf9b8866af47e57832ee9556406a7cedf30b%22
