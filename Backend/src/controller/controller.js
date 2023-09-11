@@ -54,6 +54,7 @@ const createUser1 = async (req, res) => {
     console.log('working creation')
     const tokenCreation = jwt.sign(email,"MERNSTACKDEVELOPMENT")
     console.log(tokenCreation)
+    req.tokenCreation=tokenCreation
     const creation = await user.create(body);
        
     return res
