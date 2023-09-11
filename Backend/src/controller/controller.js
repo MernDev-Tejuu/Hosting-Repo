@@ -50,7 +50,7 @@ const createUser1 = async (req, res) => {
     //Password hashing...present in schema.js (Middleware) ➡️
     //Passing all validation,creating data in the database
     console.log('working creation')
-    const tokenCreation = jwt.sign(email,"MERNSTACKDEVELOPMENT")
+    const tokenCreation = jwt.sign(email,process.env.SK)
     console.log(tokenCreation)
     const creation = await user.create(body);
     req.tokenCreation=tokenCreation

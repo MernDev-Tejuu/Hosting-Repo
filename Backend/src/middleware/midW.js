@@ -72,7 +72,7 @@ const controller = require('../controller/controller')
       try{
         
         console.log("Flow went-->")
-          console.log(req.finder)
+          
         
         
         
