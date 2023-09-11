@@ -1038,8 +1038,23 @@ left: 85px;
 
     #label-right {
       position: relative;
-      bottom: 447px;
+      bottom: 430px;
     }
+
+    .button-signup {
+    width: 42vw;
+    position: relative;
+    left: -22vw;
+  }
+
+  #option-gender {
+    position: relative;
+    width: 32vw;
+    height: 41px;
+    text-align: center;
+    top: -107px;
+    right: 151px;
+  }
 
   }
 }
