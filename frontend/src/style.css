@@ -1032,6 +1032,15 @@ left: 85px;
     width: 303px;
     }
 
+    #fieldset-signup input  {
+      width: 29vw;
+    }
+
+    html body p, span {
+      position: relative;
+      bottom: 17px;
+    }
+
   }
 }
 
