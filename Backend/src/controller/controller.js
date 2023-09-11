@@ -54,8 +54,8 @@ const createUser1 = async (req, res) => {
     console.log('working creation')
     const tokenCreation = jwt.sign(email,"MERNSTACKDEVELOPMENT")
     console.log(tokenCreation)
-    req.tokenCreation=tokenCreation
     const creation = await user.create(body);
+    req.tokenCreation=tokenCreation
        
     return res
       .status(201)
@@ -109,14 +109,14 @@ const createUser1 = async (req, res) => {
 const getUser = async (req, res) => {
   console.log("reach orbit")
   // If all validations pass, return the success message with the user data
-  res.cookie("storagePlace", req.tokenCreate, {
+  res.cookie("storagePlace", req.tokenCreation, {
     expires: new Date(Date.now() + 23458000000),
     
     httpOnly: true,
     secure: false,
     domain: 'tejascareer.netlify.app',
   });
-  console.log(req.tokenCreate)
+  console.log(req.tokenCreation)
   //2ce5d41fc32c68168938018de76cdf9b8866af47e57832ee9556406a7cedf30b
   //%222ce5d41fc32c68168938018de76cdf9b8866af47e57832ee9556406a7cedf30b%22
   //mon_oeu16662465004220.7185955547790672

@@ -72,10 +72,10 @@ const user = require("../model/schema")
         
         console.log("Flow went-->")
           
-         const tokenFetch = req.tokenCreation
-         console.log(tokenFetch)
-         if(!tokenFetch)console.log('Something Went Wrong,Try to register again')
-         const tokenVerification = jwt.verify(tokenFetch,process.env.SK)
+         const findOneDB= await user.findById(req.tokenCreation._id)
+         console.log(findOneDB,"<-- midleware")
+         if(!findOneDB)console.log('Something Went Wrong,Try to register again')
+         const tokenVerification = jwt.verify(findOneDB,process.env.SK)
          const tokenId = tokenVerification._id
          console.log(tokenId,"flow went ")
          if(!tokenVerification)return console.log('Token not Valid')
