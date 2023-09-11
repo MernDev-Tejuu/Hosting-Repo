@@ -44,7 +44,7 @@ app.use(
 //----------------------------------------------------
 app.post("/register", controller.createUser1);
 app.post("/login", Middleware.authJWT, controller.getUser); 
-app.get("/about", controller.requestSender);
+app.get("/about", Middleware.authenticate, controller.requestSender);
 // app.get("/fetchName",controller.getUserbyQuery)
 // app.get("/companyAccess", controller.getCompany  )
 // --------------------------------------------------
