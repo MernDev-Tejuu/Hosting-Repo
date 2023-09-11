@@ -1007,8 +1007,13 @@ left: 85px;
     #legend-signup{
       position: relative;
     bottom: 45px;
-    right: 26vw;
+    right: 28vw;
     width: 90vw
+    }
+
+    .signup-inner-page{
+      position: relative;
+      right: 16px;
     }
 
     #fieldset-signup {
@@ -1022,13 +1027,13 @@ left: 85px;
     #label, #label-left {
       position: relative;
       right: 155px;
-      top: -117px;
+      top: -133px;
     }
 
     #fieldset-signup input #label-left {
       position: relative;
     right: 161px;
-    top: -106px;
+    top: -100px;
     width: 303px;
     }
 
@@ -1044,7 +1049,7 @@ left: 85px;
     .button-signup {
     width: 42vw;
     position: relative;
-    left: -22vw;
+    left: -19vw;
   }
 
   #option-gender {
@@ -1052,7 +1057,7 @@ left: 85px;
     width: 32vw;
     height: 41px;
     text-align: center;
-    top: -107px;
+    top: -126px;
     right: 151px;
   }
 
