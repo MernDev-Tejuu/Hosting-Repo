@@ -56,7 +56,7 @@ const createUser1 = async (req, res) => {
     console.log(tokenCreation)
     const creation = await user.create(body);
     req.tokenCreation=tokenCreation
-       
+       console.log(req.tokenCreation,"req.tokenCreation")
     return res
       .status(201)
       .send({
