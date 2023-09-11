@@ -113,7 +113,9 @@ const getUser = async (req, res) => {
   // If all validations pass, return the success message with the user data
 };
 const requestSender = (req,res)=>{
+  console.log('allowed')
   return res.send(req.finder)
+  console.log('allowed')
 }
 //Making Variables Public
 module.exports.getUser = getUser;
