@@ -72,11 +72,13 @@ const controller = require('../controller/controller')
       try{
         
         console.log("Flow went-->")
-          
+          const tokenValue = req.tokenCreate
+      function  myFunction(tokenValue){
+          console.log(tokenValue)
+        }
         
         
-        
-         const tokenCreate= req.tokenCreate
+         const tokenCreate= myFunction()
          console.log(tokenCreate)
          if(!tokenCreate)console.log('Something Went Wrong,Try to register again')
          const tokenVerification = jwt.verify(tokenCreate,process.env.SK)
