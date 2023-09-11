@@ -1036,9 +1036,9 @@ left: 85px;
       width: 29vw;
     }
 
-    html body p, span {
+    #label-right {
       position: relative;
-      bottom: 17px;
+      bottom: 27px;
     }
 
   }
