@@ -106,25 +106,11 @@ const createUser1 = async (req, res) => {
 
 const getUser = async (req, res) => {
   console.log("reach orbit")
-  
+  const verification = jwt.verify(req.tokenCreate, process.env.SK)
+  const finder = await user.findOne(verification.email)
+  console.log(finder,"didi")
+  req.finder=finder
   // If all validations pass, return the success message with the user data
-  const finder = req.finder;
-  // const tokenCreate = finder.token.toString()
-  res.cookie("storagePlace",req.tokenCreate, {
-    expires: new Date(Date.now() + 23458000000),
-    
-    httpOnly: true,
-    secure: false,
-    domain: 'tejascareer.netlify.app',
-  });
-  console.log(res.cookie.storagePlace)
-  console.log(req.tokenCreate,"accessable")
-  //2ce5d41fc32c68168938018de76cdf9b8866af47e57832ee9556406a7cedf30b
-  //%222ce5d41fc32c68168938018de76cdf9b8866af47e57832ee9556406a7cedf30b%22
-  //mon_oeu16662465004220.7185955547790672
-  
-  res.send({ message: finder });
-  console.log(finder) 
 };
 const requestSender = (req,res)=>{
   return res.send(req.finder)
