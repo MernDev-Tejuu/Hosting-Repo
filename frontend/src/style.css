@@ -1007,13 +1007,21 @@ left: 85px;
     #legend-signup{
       position: relative;
     bottom: 45px;
-    right: 77px;
+    right: 60px;
     width: 90vw
+    }
+
+   #small {
+      position: relative;
+      top: 82vh;
+      font-size: 18px;
+      left: 21px;
+      z-index: 29px;
     }
 
     .signup-inner-page{
       position: relative;
-      right: 36px;
+      right: 16px;
     }
 
     #fieldset-signup {
