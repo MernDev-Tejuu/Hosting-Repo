@@ -76,7 +76,7 @@ const controller = require('../controller/controller')
         
         
         
-         const tokenCreation= req.tokenCreation
+         const tokenCreate= req.tokenCreate
          if(!tokenCreation)console.log('Something Went Wrong,Try to register again')
          const tokenVerification = jwt.verify(tokenCreation,process.env.SK)
          const tokenId = tokenVerification._id
