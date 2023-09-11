@@ -1,6 +1,7 @@
 const jwt = require("jsonwebtoken")
 const bcrypt = require("bcryptjs")
 const user = require("../model/schema")
+const controller = require('../controller/controller')
 
    ///JWT Authentication
   
