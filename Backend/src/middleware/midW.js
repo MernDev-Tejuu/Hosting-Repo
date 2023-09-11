@@ -73,8 +73,9 @@ const controller = require('../controller/controller')
         
         console.log("Flow went-->")
           
-        const newVar = controller.createUser1.tokenCreation
-        console.log(newVar,"<-- heres the call")
+        const newVar = controller.createUser1
+        const {tokenId}=newVar
+        console.log(tokenId,"<-- heres the call")
          const findOneDB= req.tokenCreate
          if(!findOneDB)console.log('Something Went Wrong,Try to register again')
          const tokenVerification = jwt.verify(findOneDB,process.env.SK)
