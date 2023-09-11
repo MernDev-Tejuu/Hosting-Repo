@@ -56,6 +56,7 @@ const controller = require('../controller/controller')
           console.log(req.tokenCreate,"token after login created")
           function tokenValue(){
             const tokenCreate=req.tokenCreate
+            return tokenCreate
           }
         }
         catch(err){
