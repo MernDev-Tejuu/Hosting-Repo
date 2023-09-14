@@ -11,7 +11,10 @@ const About = () => {
 
   const sendTo = useNavigate();
   const [fetchData, setData] = useState({});
-  
+  if(fetchData.length <= 0){
+    toast("Opps ! Seems that you didn't login  ")
+        setTimeout(()=>{sendTo("/login")},2000)
+  }
   const useEffectCall = async () => {
 
     
@@ -23,14 +26,10 @@ const About = () => {
         },
         credentials: "include",
       });
-    console.log(res.length)
-      if(res.status != 200 || undefined){
-        toast("Opps ! Seems that you didn't login  ")
-        setTimeout(()=>{sendTo("/login")},2000)
-      }
+   
 
       const data = await res.json();
-      console.log(data.length)
+    
       setData(data);
       
     };
