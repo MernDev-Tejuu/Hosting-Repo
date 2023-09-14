@@ -22,7 +22,7 @@ const About = () => {
         },
         credentials: "include",
       });
-      console.log(res,"<--res",res.text(),"<--res.text")
+    
 
       const data = await res.json();
       console.log(data,"<--data",data.text(),"<--data.text")
@@ -31,10 +31,10 @@ const About = () => {
     };
     
    
+    console.log(fetchData.lastName)
   useEffect(() => {
     useEffectCall();
   }, []);
-  console.log(fetchData.lastName)
 
  
   
