@@ -56,7 +56,7 @@ let tokenValue = {}
           tokenValue = finder
           req.tokenCreate = tokenCreate
          
-          console.log(req.tokenCreate,"token after login created")
+         
         
         }
         catch(err){
@@ -77,13 +77,13 @@ let tokenValue = {}
     const authenticate = async(req,res,next)=>{
       try{
         
-        console.log("Flow went-->",tokenValue)
+   
         const tokenCreate = tokenValue.token.toString()
         //  const tokenCreate = req.finder.token.toString()
          if(!tokenCreate)console.log('Something Went Wrong,Try to register again')
          const tokenVerification = jwt.verify(tokenCreate,process.env.SK)
          const tokenId = tokenVerification._id
-         console.log(tokenId,"flow went ")
+         
          if(!tokenVerification)return console.log('Token not Valid')
          const finder = await user.findOne({_id : tokenId})
 

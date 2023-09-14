@@ -11,7 +11,7 @@ const About = () => {
 
   const sendTo = useNavigate();
   const [fetchData, setData] = useState({});
-  console.log(fetchData.lastName)
+  
   const useEffectCall = async () => {
 
     
@@ -24,7 +24,7 @@ const About = () => {
         credentials: "include",
       });
     console.log(res.length)
-      if(res.status === 404 || undefined){
+      if(res.status != 200 || undefined){
         toast("Opps ! Seems that you didn't login  ")
         setTimeout(()=>{sendTo("/login")},2000)
       }
