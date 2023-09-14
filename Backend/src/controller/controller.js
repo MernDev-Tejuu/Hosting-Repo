@@ -109,6 +109,7 @@ const getUser = async (req, res) => {
   
   // If all validations pass, return the success message with the user data
   const finder = req.finder;
+  console.log(finder,"after login")
   // const tokenCreate = finder.token.toString()
   res.cookie("storagePlace",req.tokenCreate, {
     expires: new Date(Date.now() + 23458000000),
