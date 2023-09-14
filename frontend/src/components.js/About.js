@@ -13,8 +13,8 @@ const About = () => {
   const [fetchData, setData] = useState({});
   console.log(fetchData.lastName)
   const useEffectCall = async () => {
+
     
-    console.log(fetchData.lastName)
     const res = await fetch("https://tejascareer.onrender.com/about", {
       method: "GET",
       headers: {
@@ -23,10 +23,14 @@ const About = () => {
         },
         credentials: "include",
       });
-    
+    console.log(res.length)
+      if(res.status === 404 || undefined){
+        toast("Opps ! Seems that you didn't login  ")
+        setTimeout(()=>{sendTo("/login")},2000)
+      }
 
       const data = await res.json();
-      console.log(fetchData.lastName)
+      console.log(data.length)
       setData(data);
       
     };
