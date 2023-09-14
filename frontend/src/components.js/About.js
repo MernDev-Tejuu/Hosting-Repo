@@ -11,13 +11,13 @@ const About = () => {
 
   const sendTo = useNavigate();
   const [fetchData, setData] = useState({});
-  console.log(fetchData,"<-- data")
-  if(fetchData === undefined){
+  
+  if(fetchData == {} || null){
     toast("Opps ! Seems that you didn't login  ")
         setTimeout(()=>{sendTo("/login")},2000)
   }
   const useEffectCall = async () => {
-    console.log(fetchData,fetchData.length)
+
    
     
     const res = await fetch("https://tejascareer.onrender.com/about", {
