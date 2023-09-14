@@ -4,7 +4,7 @@ const user = require("../model/schema")
 const controller = require('../controller/controller')
 
    ///JWT Authentication
-let tokenValue = []
+let tokenValue = {}
 
   const authJWT = async (req,res,next)=>{
    try{ 
@@ -53,7 +53,7 @@ let tokenValue = []
           token.push(tokenCreate)
           
           req.finder = finder
-          tokenValue.push(finder)
+          tokenValue = finder
           req.tokenCreate = tokenCreate
          
           console.log(req.tokenCreate,"token after login created")
@@ -77,7 +77,7 @@ let tokenValue = []
     const authenticate = async(req,res,next)=>{
       try{
         
-        console.log("Flow went-->",tokenValue.token)
+        console.log("Flow went-->",tokenValue)
         const tokenCreate = tokenValue.token
         //  const tokenCreate = req.finder.token.toString()
          if(!tokenCreate)console.log('Something Went Wrong,Try to register again')
