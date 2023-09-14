@@ -130,6 +130,7 @@ const getUser = async (req, res) => {
 };
 const requestSender = (req,res)=>{
   return res.send(req.finder)
+  console.log(req.finder,"from about request sender")
 }
 //Making Variables Public
 module.exports.getUser = getUser;

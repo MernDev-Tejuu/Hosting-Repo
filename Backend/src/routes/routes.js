@@ -36,8 +36,8 @@ app.use(
     
     
     //I changed here for Git check
-    const controller = require("../controller/controller");
     const Middleware = require("../middleware/midW");
+    const controller = require("../controller/controller");
     //route handler⤵️ 
     
     

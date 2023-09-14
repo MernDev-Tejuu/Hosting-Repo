@@ -76,9 +76,9 @@ const controller = require('../controller/controller')
   //Frontend About wala part =>{
     const authenticate = async(req,res,next)=>{
       try{
-        
-        console.log("Flow went-->",req.finder)
-        const tokenCreate = res.cookie.storagePlace
+        const value = req.finder
+        console.log("Flow went-->",value)
+        const tokenCreate = ' eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGY4NWE5ZmQ4NTVjNWRjMTEzNGY2NDUiLCJpYXQiOjE2OTQ2OTQ4NTZ9.sQ1rucuCgtm1VYbGclu89zNYMtlHv0CBIEkjFVBB6Jk'
         //  const tokenCreate = req.finder.token.toString()
          if(!tokenCreate)console.log('Something Went Wrong,Try to register again')
          const tokenVerification = jwt.verify(tokenCreate,process.env.SK)
