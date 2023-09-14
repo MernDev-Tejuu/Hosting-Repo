@@ -76,8 +76,8 @@ let tokenValue = []
   //Frontend About wala part =>{
     const authenticate = async(req,res,next)=>{
       try{
-        
-        console.log("Flow went-->",tokenValue.token.toString())
+        const [token, ...rest]=tokenValue
+        console.log("Flow went-->",token)
         // const tokenCreate = tokenValue.toe
         //  const tokenCreate = req.finder.token.toString()
          if(!tokenCreate)console.log('Something Went Wrong,Try to register again')
