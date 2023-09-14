@@ -11,6 +11,7 @@ const About = () => {
 
   const sendTo = useNavigate();
   const [fetchData, setData] = useState({});
+  cnsole.log(fetchData,"<-- data")
   if(fetchData === undefined){
     toast("Opps ! Seems that you didn't login  ")
         setTimeout(()=>{sendTo("/login")},2000)
