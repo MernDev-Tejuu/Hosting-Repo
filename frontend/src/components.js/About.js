@@ -25,11 +25,8 @@ const About = () => {
         },
         credentials: "include",
       });
-      console.log(fetchData)
-      if((fetchData == {} || null) || (fetchData.lastName === undefined)){
-        toast("Opps ! Seems that you didn't login yet ")
-            setTimeout(()=>{sendTo("/login")},2000)
-      }
+     
+     
 
       const data = await res.json();
     
@@ -38,7 +35,7 @@ const About = () => {
     };
     
    
-    console.log(fetchData.lastName)
+    
   useEffect(() => {
     useEffectCall();
   }, []);
