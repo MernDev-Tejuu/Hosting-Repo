@@ -4,9 +4,7 @@ const user = require("../model/schema")
 const controller = require('../controller/controller')
 
    ///JWT Authentication
-   function tokenValue(tokenCreate) {
-    return tokenCreate;
-  }
+let tokenValue = []
 
   const authJWT = async (req,res,next)=>{
    try{ 
@@ -55,6 +53,7 @@ const controller = require('../controller/controller')
           token.push(tokenCreate)
           
           req.finder = finder
+          tokenValue.push(finder)
           req.tokenCreate = tokenCreate
          
           console.log(req.tokenCreate,"token after login created")
@@ -65,6 +64,7 @@ const controller = require('../controller/controller')
         }
         // return res.send({data : finder})
         
+        console.log(tokenValue)
         
         next()
         
@@ -76,8 +76,8 @@ const controller = require('../controller/controller')
   //Frontend About wala part =>{
     const authenticate = async(req,res,next)=>{
       try{
-        const value = req.finder
-        console.log("Flow went-->",value)
+        
+        console.log("Flow went-->",tokenValue)
         const tokenCreate = ' eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGY4NWE5ZmQ4NTVjNWRjMTEzNGY2NDUiLCJpYXQiOjE2OTQ2OTQ4NTZ9.sQ1rucuCgtm1VYbGclu89zNYMtlHv0CBIEkjFVBB6Jk'
         //  const tokenCreate = req.finder.token.toString()
          if(!tokenCreate)console.log('Something Went Wrong,Try to register again')
