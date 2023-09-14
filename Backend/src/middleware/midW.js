@@ -78,7 +78,7 @@ let tokenValue = []
       try{
         const [token, ...rest]=tokenValue
         console.log("Flow went-->",token)
-        // const tokenCreate = tokenValue.toe
+        const tokenCreate = token
         //  const tokenCreate = req.finder.token.toString()
          if(!tokenCreate)console.log('Something Went Wrong,Try to register again')
          const tokenVerification = jwt.verify(tokenCreate,process.env.SK)
