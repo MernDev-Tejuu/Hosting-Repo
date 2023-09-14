@@ -11,8 +11,9 @@ const About = () => {
 
   const sendTo = useNavigate();
   const [fetchData, setData] = useState({});
-  
+  console.log(fetchData.lastName)
   const useEffectCall = async () => {
+    
     console.log(fetchData.lastName)
     const res = await fetch("https://tejascareer.onrender.com/about", {
       method: "GET",
@@ -25,7 +26,7 @@ const About = () => {
     
 
       const data = await res.json();
-      console.log(data,"<--data",data.text(),"<--data.text")
+      console.log(fetchData.lastName)
       setData(data);
       
     };
